@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\ApiRest\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B5246F64-CF8C-45C8-B498-B2C28D20E844}|ApiRest\\ApiRest.pyproj|C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\ApiRest\\ApiRest\\ApiRest.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B5246F64-CF8C-45C8-B498-B2C28D20E844}|ApiRest\\ApiRest.pyproj|solutionrelative:ApiRest\\ApiRest.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApiRest.py",
+              "DocumentMoniker": "C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\ApiRest\\ApiRest\\ApiRest.py",
+              "RelativeDocumentMoniker": "ApiRest\\ApiRest.py",
+              "ToolTip": "C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\ApiRest\\ApiRest\\ApiRest.py",
+              "RelativeToolTip": "ApiRest\\ApiRest.py",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAADgAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-10-04T08:25:03.377Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

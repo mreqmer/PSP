@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\Tema01\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{218DD2CB-A0FA-4B58-9587-8DF52CA131A2}|JSON_Placeholder\\JSON_Placeholder.pyproj|C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\Tema01\\JSON_Placeholder\\JSON_Placeholder.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{218DD2CB-A0FA-4B58-9587-8DF52CA131A2}|JSON_Placeholder\\JSON_Placeholder.pyproj|solutionrelative:JSON_Placeholder\\JSON_Placeholder.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{218DD2CB-A0FA-4B58-9587-8DF52CA131A2}|JSON_Placeholder\\JSON_Placeholder.pyproj|C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\Tema01\\JSON_Placeholder\\JSONPlaceholder.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{218DD2CB-A0FA-4B58-9587-8DF52CA131A2}|JSON_Placeholder\\JSON_Placeholder.pyproj|solutionrelative:JSON_Placeholder\\JSONPlaceholder.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "JSON_Placeholder.py",
-              "DocumentMoniker": "C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\Tema01\\JSON_Placeholder\\JSON_Placeholder.py",
-              "RelativeDocumentMoniker": "JSON_Placeholder\\JSON_Placeholder.py",
-              "ToolTip": "C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\Tema01\\JSON_Placeholder\\JSON_Placeholder.py",
-              "RelativeToolTip": "JSON_Placeholder\\JSON_Placeholder.py",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "JSONPlaceholder.py",
+              "DocumentMoniker": "C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\Tema01\\JSON_Placeholder\\JSONPlaceholder.py",
+              "RelativeDocumentMoniker": "JSON_Placeholder\\JSONPlaceholder.py",
+              "ToolTip": "C:\\Users\\mrequejo\\Desktop\\repos\\PSP\\Tema01\\JSON_Placeholder\\JSONPlaceholder.py",
+              "RelativeToolTip": "JSON_Placeholder\\JSONPlaceholder.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-10-04T07:12:45.57Z",
+              "WhenOpened": "2024-10-04T07:13:40.627Z",
               "EditorCaption": ""
             }
           ]
