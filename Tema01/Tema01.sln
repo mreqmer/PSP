@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "JsonPlaceholder", "JsonPlaceholder\JsonPlaceholder.pyproj", "{6E6A3381-4907-4BE0-AB66-418E5DF98EC8}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "JSON_Placeholder", "JSON_Placeholder\JSON_Placeholder.pyproj", "{218DD2CB-A0FA-4B58-9587-8DF52CA131A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6E6A3381-4907-4BE0-AB66-418E5DF98EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E6A3381-4907-4BE0-AB66-418E5DF98EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{218DD2CB-A0FA-4B58-9587-8DF52CA131A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{218DD2CB-A0FA-4B58-9587-8DF52CA131A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BE910796-A0D1-4D09-82E3-EF11AF5BAA22}
+		SolutionGuid = {C1B68B10-9419-4D7E-950E-B4E11430486E}
 	EndGlobalSection
 EndGlobal
