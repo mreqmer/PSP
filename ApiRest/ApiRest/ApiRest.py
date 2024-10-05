@@ -24,8 +24,8 @@ Muestra todos los profesores
 """
 def mostrarProfesores():
     
-    urlPosts = apiUrl + "profesores"
-    response = str(requests.get(urlPosts).json())
+    urlProfesores = apiUrl + "profesores"
+    response = str(requests.get(urlProfesores).json())
     
     return response
 
@@ -35,8 +35,8 @@ Muestra todas las asignaturas
 """
 def mostrarAsignaturas():
     
-    urlPosts = apiUrl + "asignaturas"
-    response = str(requests.get(urlPosts).json())
+    urlAsignaturas = apiUrl + "asignaturas"
+    response = str(requests.get(urlAsignaturas).json())
     
     return response
 
@@ -44,9 +44,9 @@ def mostrarAsignaturas():
 Añade un profesor
 """
 def nuevoProfesor(id, dni, nombre, apellidos, telefono, direccion, cuentaBancaria):
-    urlNuevoPost = apiUrl + "profesores"
+    urlNuevoProfesor = apiUrl + "profesores"
     datos = {"id":id, "dni":dni, "nombre":nombre, "apellidos":apellidos, "telefono": telefono, "direccion":direccion, "cuentaBancaria":cuentaBancaria}
-    response = requests.post( urlNuevoPost, json=datos)
+    response = requests.post( urlNuevoProfesor, json=datos)
 
     return response
 
@@ -54,11 +54,12 @@ def nuevoProfesor(id, dni, nombre, apellidos, telefono, direccion, cuentaBancari
 Modifica Profesor
 """
 def modificaProfesor(id, dni, nombre, apellidos, telefono, direccion, cuentaBancaria):
-   urlModificaProfesor = apiUrl + "profesores/" + str(id)
+    urlModificaProfesor = apiUrl + "profesores/" + str(id)
     datos = {"id":id, "dni":dni, "nombre":nombre, "apellidos":apellidos, "telefono": telefono, "direccion":direccion, "cuentaBancaria":cuentaBancaria}
-    response = str(requests.put(urlModificaPost, json=datos).json())
+    response = str(requests.put(urlModificaProfesor, json=datos).json())
      
     return response
+
 
 
 """
@@ -70,6 +71,42 @@ def nuevaAsignatura(id, titulo, numHoras, idProfesor):
     response = requests.post( urlNuevoPost, json=datos)
 
     return response
+
+"""
+Modifica Asignatura
+"""
+def modificaProfesor(id, titulo, numHoras, idProfesor):
+    urlModificaAsignatura = apiUrl + "Asignaturas/" + str(id)
+    datos = {id, titulo, numHoras, idProfesor}
+    response = str(requests.put(urlModificaAsignatura, json=datos).json())
+     
+    return response
+
+"""
+Elimina Profesor
+"""
+def eliminaProfesor(id)
+    urlEliminaProfesor = apiUrl + "Profesores/" + str(id)
+    response = str(requests.delete(urlEliminaProfesor).json())
+
+    return response
+
+"""
+Elimina Asignatura
+"""
+def eliminaProfesor(id)
+    urlEliminaAsignatura = apiUrl + "Asignaturas/" + str(id)
+    response = str(requests.delete(urlEliminaAsignatura).json())
+
+    return response
+
+
+
+
+
+
+
+
 
 
 
