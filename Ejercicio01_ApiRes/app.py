@@ -7,7 +7,7 @@ app = Flask(__name__)
 profesores = [
     {"id": 1, "nombre":"Juan", "apellidos":"Barrena","telefono":"666555444", "direccion":"C/calle bonita", "cc":"ES1234"},
     {"id": 2, "nombre":"Maria", "apellidos":"Buenavilla","telefono":"666555444", "direccion":"C/calle bonita", "cc":"ES4321"},
-    {"id": 2, "nombre":"Pedro", "apellidos":"Mapache","telefono":"666555444", "direccion":"C/calle bonita", "cc":"ES5555"},
+    {"id": 3, "nombre":"Pedro", "apellidos":"Mapache","telefono":"666555444", "direccion":"C/calle bonita", "cc":"ES5555"},
 ]
 
 asignaturas = [
@@ -49,6 +49,7 @@ def get_asignaturas():
 
 @app.get("/asignaturas/<int:id>")
 def get_asignatura(id):
+    return "A"
 
 
 """
@@ -59,7 +60,7 @@ def findNextId():
 
 @app.post("/profesores")
 
-def add_country():
+def add_profesor():
     if request.is_json:
         profesor = request.get_json()
         profesor["id"] = findNextId()
