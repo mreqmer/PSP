@@ -11,9 +11,22 @@ rutaUsuarios = "app/ficheros/users.json"
 usersBP = Blueprint('users', __name__)
 
 @usersBP.get('/')
-def get_usuarios():
-    usuarios = leeFichero(rutaUsuarios)
-    return jsonify(usuarios)
+def login_usuario():
+    if request.is_json:
+        users = leeFichero(rutaUsuarios)
+        user = request.get_json()
+        username = user['username']
+        password = user['password'].encode('utf-8')
+        for userFile in users:
+            if userFile['username'] == username:
+                passwordFile = userFile['password']
+                if bcrypt.checkpw(password, bytes.fromhex(passwordFile)):
+                    token = create_access_token(identity = username)
+                    return {'token':token}, 200
+                else:
+                    return {'error' : 'No authorized'}, 401
+        return {'error' : 'User not found'}, 404
+    return {"error" : "Request must be JSON"}, 415
 
 @usersBP.post('/')
 def add_usuario():
@@ -31,8 +44,10 @@ def add_usuario():
         new_user['password'] = hashPassword
         lista.append(new_user)
         escribeFichero(rutaUsuarios, lista)
-        token = create_access_token(identity = new_user["username"])
+        token = create_access_token(identity = new_user['username'])
         return {'token':token}, 201
     else:
         return {"error" : "JSON incorrecto"}, 415
+
+
 

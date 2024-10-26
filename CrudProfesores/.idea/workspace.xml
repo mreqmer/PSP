@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8c00df32-57a3-4a32-b161-836145b97d41" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/.idea/ApiProfesores.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/.idea/ApiProfesores.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/asignaturas/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/asignaturas/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/asignaturas.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/asignaturas.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/profesores.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/profesores.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/profesores/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/profesores/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/users/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CrudProfesores.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CrudProfesores.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/Asignatura.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/CrudAsignaturas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/CrudProfesores.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/Main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crud/Profesor.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2nyDKclSrPVddTMy3QAf4i9r8CK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.CrudProfesores.executor": "Run",
+    "Python.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/porqu/OneDrive/Escritorio/repo/PSP/CrudProfe",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c00df32-57a3-4a32-b161-836145b97d41" name="Changes" comment="" />
+      <created>1729936359907</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729936359907</updated>
+      <workItem from="1729936368449" duration="7015000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CrudProfesores$Main.coverage" NAME="Main Coverage Results" MODIFIED="1729941694823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
+    <SUITE FILE_PATH="coverage/CrudProfesores$CrudProfesores.coverage" NAME="CrudProfesores Coverage Results" MODIFIED="1729939860471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crud" />
+  </component>
+</project>

@@ -10,6 +10,6 @@ app.register_blueprint(asignaturasBP, url_prefix='/asignaturas')
 app.register_blueprint(usersBP, url_prefix='/users')
 
 #Secret_Key siempre se pone, el token_generado es el token que se usa para acceder
-app.config['Secret_Key'] = 'token_generado'
+app.config['JWT_SECRET_KEY'] = 'token_generado'
 
 jwt = JWTManager(app)

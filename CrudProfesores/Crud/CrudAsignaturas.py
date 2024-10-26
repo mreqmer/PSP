@@ -1,78 +1,83 @@
 from pip._vendor import requests
 
-from Crud.Asignatura import Asignatura
-
 apiUrl = "http://127.0.0.1:5000/"
-
 
 """
 Muestra todas las asignaturas
 """
 def getAsignaturas():
-    id = input("Introduce el id: ")
-    urlAsignaturas = apiUrl + "asignaturas/" + str(id)
+    urlAsignaturas = apiUrl + "asignaturas"
     response = str(requests.get(urlAsignaturas).json())
     return response
-
+"""
+Muestra una asignatura
+"""
+def getAsignatura(id):
+    urlAsignatura = apiUrl + "asignaturas/" + str(id)
+    response = str(requests.get(urlAsignatura).json())
+    return response
 """
 Anade una asignatura
 """
-
 def postAsignatura(asignatura):
     urlNuevaAsignatura = apiUrl + "asignaturas"
-    datos = vars(asignatura)
-    response = requests.post(urlNuevaAsignatura, json=datos)
+    response = requests.post(urlNuevaAsignatura, json=asignatura)
     return response
-
 """
-Modifica Asignatura
+Modifica una asignatura
 """
-
-def putAsginatura(asignatura):
-    datos = vars(asignatura)
-    id = datos.get("id")
+def putAsignatura(id, asignatura):
     urlModificaAsignatura = apiUrl + "asignaturas/" + str(id)
-    response = str(requests.put(urlModificaAsignatura, json=datos).json())
-
+    response = str(requests.put(urlModificaAsignatura, json=asignatura).json())
     return response
-
 """
-Elimina Asignatura
+Borra una asignatura
 """
-def deleteAsignatura(asignatura):
-    datos = vars(asignatura)
-    id = datos.get("id")
-    urlEliminaAsignatura = apiUrl + "asignaturas/" + str(id)
-    response = str(requests.delete(urlEliminaAsignatura).json())
+def deleteAsignatura(id):
+    urlBorraAsignatura = apiUrl + "asignaturas/" + str(id)
+    response = str(requests.delete(urlBorraAsignatura).json())
     return response
-
-
 """
-Pregunta datos de una asignatura nueva
+Pregunta datos de una asignatura
 """
-def datosAddAsignatura():
-    id = 0
-    titulo = input("Introduce el titulo: ")
+def datosAsignatura():
+    titulo = input("Introduce el nombre: ")
     numHoras = input("Introduce el numero de horas: ")
-    idProfesor = input("Introduce el id de profesor: ")
-    return Asignatura(id, titulo, numHoras, idProfesor)
+    idProfesor = input("Introduce el id del profesor que la imparte: ")
+    asignatura = {"titulo": titulo, "numHoras": numHoras, "idProfesor": idProfesor}
+    return asignatura
 
 """
-Pregunta datos para modificar una asignatura
+Muestra el menu para la gestion de asignaturas
 """
-def datosModificaAsignatura():
-    id = int(input("Introduce el id de la asignatura a modificar: "))
-    titulo = input("Introduce el nuevo titulo: ")
-    numHoras = input("Introduce el numero numero de horas: ")
-    idProfesor = input("Introduce el nuevo id de profesor: ")
-    return Asignatura(int(id), titulo, numHoras, idProfesor)
-"""
-Pregunta datos para borrar una asignatura
-"""
-def datosDeleteAsignatura():
-    id = input("Introduce el id de la asignatura a borrar: ")
-    titulo = 0
-    numHoras = 0
-    idProfesor = 0
+def printMenuAsignaturas():
+    print("\n--- Menú ---")
+    print("1. Mostrar asignaturas ")
+    print("2. Buscar una asignatura ")
+    print("3. Añadir asignatura ")
+    print("4. Actualizar asignatura ")
+    print("5. Eliminar asignatura")
+    print("0. Salir de la aplicación")
 
-    return Asignatura(int(id), titulo,numHoras, idProfesor)
+"""
+Funcionalidad del menu de las asignaturas
+"""
+def menuAsignaturas(opc):
+    match opc:
+        case "1":
+            print(getAsignaturas())
+        case "2":
+            id = int(input("Introduce el id de la asignatura: "))
+            print(getAsignatura(id))
+        case "3":
+            nueva_asignatura = datosAsignatura()
+            print(postAsignatura(nueva_asignatura))
+        case "4":
+            id = int(input("Introduce el id de la asignatura a modificar: "))
+            actualiza_asignatura = datosAsignatura()
+            print(putAsignatura(id, actualiza_asignatura))
+        case "5":
+            id = int(input("Introduce el id de la asignatura a borrar: "))
+            print(deleteAsignatura(id))
+        case _:
+            print("Opcion invalida")

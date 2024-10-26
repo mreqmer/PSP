@@ -1,83 +1,100 @@
 from pip._vendor import requests
 
-from Crud.Profesor import Profesor
-
 apiUrl = "http://127.0.0.1:5000/"
-
 
 """
 Muestra todos los profesores
 """
 def getProfesores():
-    id = input("Introduce el id: ")
+    urlProfesores = apiUrl + "profesores"
+    response = str(requests.get(urlProfesores).json())
+    return response
+"""
+Muestra un profesor
+"""
+def getProfesor(id):
     urlProfesores = apiUrl + "profesores/" + str(id)
+    response = str(requests.get(urlProfesores).json())
+    return response
+"""
+Muestra las asignaturas que imparte un profesor
+"""
+def getProfesorAsignaturas(id):
+    urlProfesores = apiUrl + "profesores/" + str(id) + "/asignaturas"
     response = str(requests.get(urlProfesores).json())
     return response
 
 """
-Anade un profesor
+Anade un nuevo profesor
 """
 def postProfesor(profesor):
     urlNuevoProfesor = apiUrl + "profesores"
-    datos = vars(profesor)
-    response = requests.post(urlNuevoProfesor, json=datos)
+    response = requests.post(urlNuevoProfesor, json=profesor)
     return response
 
 """
-Modifica Profesor
+Modifica un profesor
 """
-def putProfesor(profesor):
-    datos = vars(profesor)
-    id = datos.get("id")
+def putProfesor(id, profesor):
     urlModificaProfesor = apiUrl + "profesores/" + str(id)
-    response = str(requests.put(urlModificaProfesor, json=datos).json())
-
+    response = str(requests.put(urlModificaProfesor, json=profesor).json())
     return response
 
-
 """
-Elimina Profesor
+Borra a un profesor
 """
-def deleteProfesor(profesor):
-    datos = vars(profesor)
-    id = datos.get("id")
-    urlEliminaProfesor = apiUrl + "profesores/" + str(id)
-    response = str(requests.delete(urlEliminaProfesor).json())
-
+def deleteProfesor(id):
+    urlBorraProfesor = apiUrl + "profesores/" + str(id)
+    response = str(requests.delete(urlBorraProfesor).json())
     return response
 
 """
 Pregunta datos de un profesor nuevo
 """
-def datosAddProfesor():
-    id = 0
+def datosProfesor():
     nombre = input("Introduce el nombre: ")
     apellidos = input("Introduce el apellidos: ")
     telefono = input("Introduce el telefono: ")
     direccion = input("Introduce el direccion: ")
     cc = input("Introduce el Cuenta Bancaria: ")
-    return Profesor( id, nombre, apellidos, telefono, direccion, cc)
+    profesor = {"nombre": nombre, "apellidos": apellidos, "telefono": telefono, "direccion": direccion,"cc": cc}
+    return profesor
 
 """
-Pregunta datos para modificar un profesor
+Muestra el menu para la gestion de profesores
 """
-def datosModificaProfesor():
-    id = int(input("Introduce el id del profesor a modificar: "))
-    nombre = input("Introduce el nuevo nombre: ")
-    apellidos = input("Introduce el nuevo apellidos: ")
-    telefono = input("Introduce el nuevo telefono: ")
-    direccion = input("Introduce la nueva direccion: ")
-    cc = input("Introduce el nueva Cuenta Bancaria: ")
-    return Profesor(int(id), nombre, apellidos, telefono, direccion, cc)
-"""
-Pregunta datos para borrar un profesor
-"""
-def datosDeleteProfesor():
-    id = input("Introduce el id del profesor a borrar: ")
-    nombre = 0
-    apellidos = 0
-    telefono = 0
-    direccion = 0
-    cc = 0
+def printMenuProfesores():
+    print("\n--- Menú ---")
+    print("1. Mostrar profesores")
+    print("2. Buscar un profesor")
+    print("3. Mostrar asignaturas de un profesor")
+    print("4. Añadir profesor")
+    print("5. Actualizar profesor")
+    print("6. Eliminar profesor")
+    print("0. Salir de la aplicación")
 
-    return Profesor(int(id), nombre,apellidos, telefono, direccion, cc)
+"""
+funcionalidad del menu de los profesores
+"""
+def menuProfesores(opc):
+    match opc:
+        case "1":
+            print(getProfesores())
+        case "2":
+            id = int(input("Introduce el id del profesor a buscar: "))
+            print(getProfesor(id))
+        case "3":
+            id = int(input("Introduce el id del profesor: "))
+            print(getProfesorAsignaturas(id))
+        case "4":
+            nuevo_profesor = datosProfesor()
+            print(postProfesor(nuevo_profesor))
+        case "5":
+            id = int(input("Introduce el id del profesor a actualizar: "))
+            actualiza_profesor = datosProfesor()
+            print(putProfesor(id, actualiza_profesor))
+        case "6":
+            id = int(input("Introduce el id del profesor a borrar: "))
+            print(deleteProfesor(id))
+        case _:
+            print("Opcion invalida")
