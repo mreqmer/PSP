@@ -5,23 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c00df32-57a3-4a32-b161-836145b97d41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ApiProfesores/.idea/ApiProfesores.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/.idea/ApiProfesores.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ApiProfesores/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/asignaturas/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/asignaturas/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/asignaturas.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/asignaturas.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/profesores.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/profesores.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/leer_escribir.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/utils/leer_escribir.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/ficheros/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/profesores/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/profesores/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ApiProfesores/app/users/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ApiProfesores/app/users/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CrudProfesores.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CrudProfesores.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crud/Asignatura.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crud/CrudAsignaturas.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crud/CrudProfesores.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crud/Main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crud/Profesor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ApiProfesores/profesores.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,10 +29,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2nyDKclSrPVddTMy3QAf4i9r8CK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,7 +44,7 @@
     "Python.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/porqu/OneDrive/Escritorio/repo/PSP/CrudProfe",
+    "last_opened_file_path": "C:/Users/porqu/OneDrive/Escritorio/repo/PSP/ApiProfesores",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1729936359907</updated>
       <workItem from="1729936368449" duration="7015000" />
+      <workItem from="1730020986117" duration="1797000" />
     </task>
     <servers />
   </component>

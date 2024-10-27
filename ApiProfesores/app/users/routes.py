@@ -1,15 +1,17 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, request
 from flask_jwt_extended import create_access_token
 import bcrypt
 
-from app import users
-from app.ficheros.leer_escribir import leeFichero, escribeFichero
+from app.utils.leer_escribir import leeFichero, escribeFichero
 
-
+#Ruta del fichero de usuarios
 rutaUsuarios = "app/ficheros/users.json"
 
 usersBP = Blueprint('users', __name__)
 
+"""
+Autentificacion de usuario
+"""
 @usersBP.get('/')
 def login_usuario():
     if request.is_json:
@@ -28,6 +30,9 @@ def login_usuario():
         return {'error' : 'User not found'}, 404
     return {"error" : "Request must be JSON"}, 415
 
+"""
+Creacion de nuevo usuario
+"""
 @usersBP.post('/')
 def add_usuario():
     lista = leeFichero(rutaUsuarios)
