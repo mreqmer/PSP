@@ -1,6 +1,6 @@
 from pip._vendor import requests
 
-apiUrl = "http://127.0.0.1:5000/"
+apiUrl = "http://localhost:5050/"
 
 """
 Muestra todas las asignaturas

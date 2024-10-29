@@ -1,6 +1,7 @@
 from pip._vendor import requests
+import time
 
-apiUrl = "http://127.0.0.1:5000/"
+apiUrl = "http://localhost:5050/"
 
 """
 Muestra todos los profesores
@@ -27,9 +28,26 @@ def getProfesorAsignaturas(id):
 """
 Anade un nuevo profesor
 """
-def postProfesor(profesor):
+def postProfesor(profesor, token):
     urlNuevoProfesor = apiUrl + "profesores"
-    response = requests.post(urlNuevoProfesor, json=profesor)
+    headers = {"Authorization": "Bearer " + token}
+
+    try:
+        response = requests.post(urlNuevoProfesor, json=profesor, headers=headers)
+    except Exception as e:
+        print("Error al realizar la solicitud:", e)
+        return None
+    #TODO cambiar a aceptar tambien la 201
+    # Si la petición es exitosa
+    if response.status_code == 200:
+        # Muestra el JSON correspondiente a la petición
+        print("Profesor añadido correctamente:", response.json())
+    else:
+        # Muestra un mensaje de error con el código de estado
+        print("Se ha producido un error:", response.status_code)
+
+    # Pausa la ejecución durante 2 segundos
+    time.sleep(2)
     return response
 
 """
@@ -76,7 +94,7 @@ def printMenuProfesores():
 """
 funcionalidad del menu de los profesores
 """
-def menuProfesores(opc):
+def menuProfesores(opc, token):
     match opc:
         case "1":
             print(getProfesores())
@@ -88,7 +106,7 @@ def menuProfesores(opc):
             print(getProfesorAsignaturas(id))
         case "4":
             nuevo_profesor = datosProfesor()
-            print(postProfesor(nuevo_profesor))
+            print(postProfesor(nuevo_profesor, token))
         case "5":
             id = int(input("Introduce el id del profesor a actualizar: "))
             actualiza_profesor = datosProfesor()

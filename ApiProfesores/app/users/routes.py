@@ -30,6 +30,20 @@ def login_usuario():
         return {'error' : 'User not found'}, 404
     return {"error" : "Request must be JSON"}, 415
 
+@usersBP.post("/login")
+def getUsuario():
+   if request.is_json:
+       user = request.get_json()
+       username = user["username"]
+       password = user["password"]
+       usuarios = leeFichero(rutaUsuarios)
+       for usuario in usuarios:
+           if usuario["username"] == username and bcrypt.checkpw(password.encode("utf-8"),bytes.fromhex(usuario["password"])):
+               return {"token": create_access_token(identity=username)}, 200
+       return {"token":""}, 401
+   return {"error": "Request must be JSON"}, 415
+
+
 """
 Creacion de nuevo usuario
 """

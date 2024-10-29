@@ -75,7 +75,7 @@ def modfica_profesores(id):
                     profesor[element] = nuevoProfesor[element]
                 escribeFichero(rutaProfesores, profesores)
                 return profesor, 200
-    return {"error":"Request must be JSON"}, 404
+    return {"error":"Request must be JSON"}, 415
 
 """
 Borra un profesor
