@@ -1,7 +1,7 @@
 from pip._vendor import requests
 import time
 
-apiUrl = "http://localhost:5050/"
+apiUrl = "http://localhost:5000/"
 
 """
 Muestra todos los profesores
@@ -37,9 +37,7 @@ def postProfesor(profesor, token):
     except Exception as e:
         print("Error al realizar la solicitud:", e)
         return None
-    #TODO cambiar a aceptar tambien la 201
-    # Si la petición es exitosa
-    if response.status_code == 200:
+    if response.ok:
         # Muestra el JSON correspondiente a la petición
         print("Profesor añadido correctamente:", response.json())
     else:
@@ -53,17 +51,38 @@ def postProfesor(profesor, token):
 """
 Modifica un profesor
 """
-def putProfesor(id, profesor):
+def putProfesor(id, profesor, token):
     urlModificaProfesor = apiUrl + "profesores/" + str(id)
-    response = str(requests.put(urlModificaProfesor, json=profesor).json())
+    headers = {"Authorization": "Bearer " + token}
+    try:
+        response = requests.put(urlModificaProfesor, json=profesor, headers=headers)
+    except Exception as e:
+        print("Error al realizar la solicitud:", e)
+        return None
+    if response.ok:
+        print("Profesor modificado correctamente:", response.json())
+    else:
+        print("Se ha producido un error:", response.status_code)
+    time.sleep(2)
     return response
 
 """
 Borra a un profesor
 """
-def deleteProfesor(id):
+def deleteProfesor(id, token):
     urlBorraProfesor = apiUrl + "profesores/" + str(id)
-    response = str(requests.delete(urlBorraProfesor).json())
+    headers = {"Authorization": "Bearer " + token}
+    try:
+        response = requests.delete(urlBorraProfesor, headers=headers)
+    except Exception as e:
+        print("Error al realizar la solicitud:", e)
+        return None
+    if response.ok:
+        # Muestra el JSON correspondiente a la petición
+        print("Profesor borrado correctamente:", response.json())
+    else:
+        # Muestra un mensaje de error con el código de estado
+        print("Se ha producido un error:", response.status_code)
     return response
 
 """
@@ -110,9 +129,9 @@ def menuProfesores(opc, token):
         case "5":
             id = int(input("Introduce el id del profesor a actualizar: "))
             actualiza_profesor = datosProfesor()
-            print(putProfesor(id, actualiza_profesor))
+            print(putProfesor(id, actualiza_profesor, token))
         case "6":
             id = int(input("Introduce el id del profesor a borrar: "))
-            print(deleteProfesor(id))
+            print(deleteProfesor(id, token))
         case _:
             print("Opcion invalida")

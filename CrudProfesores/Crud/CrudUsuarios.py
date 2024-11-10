@@ -2,7 +2,7 @@ from time import sleep
 
 from pip._vendor import requests
 
-apiUrl = "http://localhost:5050/users/login"
+apiUrl = "http://localhost:5000/users/login"
 
 
 def login_usuarios():

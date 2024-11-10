@@ -13,6 +13,7 @@ def menu():
 
 def Main():
     menu()
+    token = ""
     opc = input("Selecciona una opción: ")
     while(opc!="0"):
         match opc:
@@ -26,6 +27,7 @@ def Main():
                 menuAsignaturas(opc)
             case "3":
                 token = login_usuarios()
+                #TODO quitar el print que esta solo de prueba
                 print(token)
 
             case _:
