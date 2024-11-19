@@ -20,8 +20,6 @@ def test_pinta_tablero1():
     cadEsperada += "pepe\tI\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tF"
     assert parchis.pinta_tablero(parchis) == cadEsperada
 
-
-
 def test_pinta_tablero2():
     parchis = ParchisClase ("juan", "pepe")
     parchis.ficha_j1 = 5

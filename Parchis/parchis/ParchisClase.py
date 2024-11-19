@@ -20,7 +20,7 @@ class ParchisClase:
         ParchisClase.dado1 = randint(1,6)
         ParchisClase.dado2 = randint(1,6)
 
-
+    #TODO cambiar esto a no estatico y comprobar el test
     @staticmethod
     def pinta_tablero(self):
        cadena = ""
@@ -53,9 +53,17 @@ class ParchisClase:
                cadena += "F"
        return cadena
 
-    @staticmethod
     def avanza_posiciones(self, turno):
-        self.ficha_j1 = ParchisClase.dado1 + ParchisClase.dado2
+
+        if(turno == 1):
+            self.ficha_j1 = self.ficha_j1 + ParchisClase.dado1 + ParchisClase.dado2
+            if(self.ficha_j1 > ParchisClase.TAM_TABLERO):
+                rebote = self.ficha_j1-ParchisClase.TAM_TABLERO
+                self.ficha_j1 = ParchisClase.TAM_TABLERO - rebote
+        else:
+            self.ficha_j2 = self.ficha_j2 + ParchisClase.dado1 + ParchisClase.dado2
+
+
 
 
 
