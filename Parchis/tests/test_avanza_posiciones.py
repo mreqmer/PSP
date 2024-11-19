@@ -44,6 +44,14 @@ def test_avanza_posiciones5():
     parchis.avanza_posiciones(1)
     assert parchis.ficha_j1 == 14
 
+def test_avanza_posiciones6():
+    parchis = ParchisClase("juan", "pepe")
+    parchis.ficha_j2 = 16
+    ParchisClase.dado1 = 5
+    ParchisClase.dado2 = 5
+    parchis.avanza_posiciones(2)
+    assert parchis.ficha_j2 == 14
+
 
 
 
