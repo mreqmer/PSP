@@ -2,7 +2,7 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from parchis.ParchisClase import ParchisClase
+
 
 def test_avanza_posiciones1():
     parchis = ParchisClase("juan", "pepe")
